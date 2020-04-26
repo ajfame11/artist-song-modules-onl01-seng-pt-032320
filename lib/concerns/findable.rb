@@ -1,5 +1,5 @@
 module Findable
   def find_by_name
-    ObjectSpace.each_object(ClassName)
+    @@all.detect{|a| a.name == name}
   end
 end
